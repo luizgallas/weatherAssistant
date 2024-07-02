@@ -1,10 +1,9 @@
-import express from 'express';
 import * as dotenv from 'dotenv';
+dotenv.config({ path: '../.env' });
+import express from 'express';
 import bodyParser from 'body-parser';
 
 import router from './controllers/router';
-
-dotenv.config();
 
 const app = express();
 const port = 3000;

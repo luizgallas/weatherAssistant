@@ -1,7 +1,7 @@
 import axios from "axios";
 import { WeatherData } from "../types/WeatherInfo";
 
-export class AssistantService {
+export class WeatherService {
   OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY;
 
   async getWeatherData(location: string): Promise<WeatherData> {
@@ -39,13 +39,13 @@ export class AssistantService {
       const rain = weatherData.rain ? weatherData.rain['3h'] : 'no';
       const wind = weatherData.wind.speed;
 
-      const explanation = `
+      const recommendation = `
         Today in ${weatherData.name}, ${weatherData.sys.country}, The temperature feels like ${temperature}°C,
         with a humidity of ${humidity}%. There has been ${rain} rainfall in the last 3 hours, and the wind speed is ${wind} m/s. 
         Based on these conditions, ${weatherAnalysis}.
       `;
 
-      return explanation
+      return recommendation;
     } catch(error) {
       throw new Error("Unable to generate weather recommendation.")
     }
