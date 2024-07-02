@@ -47,7 +47,7 @@ export class AssistantService {
 
       return explanation
     } catch(error) {
-      return "Unable to generate weather recommendation."
+      throw new Error("Unable to generate weather recommendation.")
     }
   }
 }
