@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import assistantController from './assistantController';
+import assistantController from './weather';
 
 const router = Router();
 

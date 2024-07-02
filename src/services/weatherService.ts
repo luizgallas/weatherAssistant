@@ -1,18 +1,5 @@
 import axios from "axios";
-import OpenAI from "openai";
 import { WeatherData } from "../types/WeatherInfo";
-
-const openai = new OpenAI();
-
-export async function main() {
-  const completion = await openai.chat.completions.create({
-    messages: [{ role: "system", content: "You are a helpful assistant." }],
-    model: "gpt-3.5-turbo",
-  });
-
-  console.log(completion.choices[0]);
-}
-
 
 export class AssistantService {
   OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY;

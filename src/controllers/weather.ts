@@ -1,10 +1,10 @@
 import { Router, Request, Response } from 'express';
-import { AssistantService } from '../services/assistantService';
+import { AssistantService } from '../services/weatherService';
 
 const assistantController = Router();
 const assistantService = new AssistantService();
 
-assistantController.post('/', async (req: Request, res: Response) => {
+assistantController.post('/weather', async (req: Request, res: Response) => {
     console.log(req.body)
     if (!req.body || !req.body.location) {
         return res.status(400).json({ error: 'A location is required to measure the weather conditions.' });

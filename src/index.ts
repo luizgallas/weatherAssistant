@@ -1,4 +1,4 @@
-import express, { Router } from 'express';
+import express from 'express';
 import * as dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 
