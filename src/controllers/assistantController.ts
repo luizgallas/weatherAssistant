@@ -6,7 +6,6 @@ const assistantController = Router();
 const assistantService = new AssistantService();
 
 assistantController.post('/chat', async (req: Request, res: Response) => {
-    console.log(req.body)
     if (!req.body || !req.body.location) {
         return res.status(400).json({ error: 'A location is required to measure the weather conditions.' });
     }
@@ -19,11 +18,10 @@ assistantController.post('/chat', async (req: Request, res: Response) => {
         if (response) {
             res.send(response.text.value);
         } else {
-            res.send("Unable to provide a recommendation for the given location.")
+            res.status(500).json({ error: "Unable to provide a recommendation for the given location." })
         }
-
     } catch(error) {
-        res.send(error);
+        res.status(500).json({ error });
     }
 });
 
