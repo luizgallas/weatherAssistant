@@ -29,7 +29,7 @@ export const Title = styled.h1`
 
 export const Body = styled.body``;
 
-export const InputContainer = styled.form`
+export const InputContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,4 +43,15 @@ export const ButtonContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+`;
+
+export const RecommendationContainer = styled.div `
+    display: flex;
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: ${Colors.background};
 `;
