@@ -14,9 +14,9 @@ export const Button = styled.button`
 
     &:focus {
         outline-color: ${Colors.inputBorder};
-    }
+    };
 
     &:hover {
         cursor: pointer;
-    }
+    };
 `;

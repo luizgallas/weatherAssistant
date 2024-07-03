@@ -10,5 +10,5 @@ export const Input = styled.input`
     &:focus {
         border-color: ${Colors.inputBorder};
         outline: none;
-    }
-`
+    };
+`;

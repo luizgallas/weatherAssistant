@@ -6,7 +6,6 @@ import { Loader } from "../../components/Loader/Loader";
 import LogoSvg from '../../assets/images/Logo.svg'
 import { retrieveWeatherRecommendation } from "../../services/assistantService";
 
-
 export const Home = () => {
     const [city, setCity] = useState<string>("");
     const [country, setCountry] = useState<string>("");

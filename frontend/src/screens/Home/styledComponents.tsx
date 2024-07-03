@@ -88,4 +88,4 @@ export const RecommendationContainer = styled.div<RecommendationContainerProps>`
 export const RecommendationText = styled.p`
     color: ${Colors.text};
     margin: 24px;
-`
+`;

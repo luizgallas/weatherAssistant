@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home } from './screens/Home/Home';
 import styled from 'styled-components';
 import { Colors } from './assets/colors';
