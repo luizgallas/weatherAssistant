@@ -1,4 +1,4 @@
-import { FormEventHandler, useState } from "react"
+import { useState } from "react"
 import { Input } from "../../components/Input/Input"
 import { Body, ButtonContainer, Container, Header, InputContainer, Logo, RecommendationContainer, RecommendationText, Title } from "./styledComponents"
 import { Button } from "../../components/Button/Button";
@@ -16,11 +16,11 @@ export const Home = () => {
 
     const handleCheckWeather = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
+        setWeatherRecommendation("");
         setIsLoading(true);
+
         const response = await retrieveWeatherRecommendation(city, country);
         setWeatherRecommendation(response);
-
         setIsLoading(false);
     }
 
@@ -49,9 +49,11 @@ export const Home = () => {
                         <Button type="submit">Check the weather</Button>
                     </ButtonContainer>
                 </form>
-                <RecommendationContainer>
+                <RecommendationContainer $isLoading={isLoading}>
                     {isLoading ? <Loader /> : null}
-                    {weatherRecommendation ? <RecommendationText>{weatherRecommendation}</RecommendationText> : null}
+                    {weatherRecommendation 
+                        ? <RecommendationText>{weatherRecommendation}</RecommendationText> 
+                        : null}
                 </RecommendationContainer>
             </Body>
         </Container>

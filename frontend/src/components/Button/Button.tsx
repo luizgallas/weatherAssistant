@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Colors } from "../../assets/colors";
 
 export const Button = styled.button`
-    width: 30vw;
+    width: 40vw;
     height: 40px;
     border: none;
     border-radius: 8px;

@@ -1,11 +1,15 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Colors } from "../../assets/colors";
+
+interface RecommendationContainerProps {
+    $isLoading: boolean;
+}
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 60vw;
-    height: 80vh;
+    min-height: 80vh;
     background-color: ${Colors.frame};
     border-radius: 8px;
     padding: 24px;
@@ -19,15 +23,28 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.img`
-    width: 12vw;
+    width: 30vw;
+    margin-bottom: 40px;
+
+    @media (min-width: 1200px) {
+        width: 15vw;
+    }
+
+    @media (max-width: 480px) {
+        width: 40vw;
+    }
 `;
 
 export const Title = styled.h1`
     color: ${Colors.text};
     font-size: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 `;
 
-export const Body = styled.body``;
+export const Body = styled.main``;
 
 export const InputContainer = styled.div`
     display: flex;
@@ -35,6 +52,11 @@ export const InputContainer = styled.div`
     justify-content: center;
     width: 100%;
     gap: 40px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 export const ButtonContainer = styled.div`
@@ -45,18 +67,23 @@ export const ButtonContainer = styled.div`
     margin-top: 30px;
 `;
 
-export const RecommendationContainer = styled.div `
+export const RecommendationContainer = styled.div<RecommendationContainerProps>`
     display: flex;
     margin-top: 10vh;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    height: 100%;
+    min-height: 20vh;
     border-radius: 8px;
     background-color: ${Colors.background};
+
+    ${({$isLoading}) => $isLoading && css`
+        align-items: center;
+        justify-content: center;
+    `}
 `;
 
 export const RecommendationText = styled.p`
     color: ${Colors.text};
-    padding: 0px 24px;
+    margin: 24px;
 `
