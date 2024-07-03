@@ -9322,6 +9322,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+typeface-signika@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-signika/-/typeface-signika-1.1.13.tgz#9664d20fc9c7b0040a67c4e84fbef65f6840d52c"
+  integrity sha512-g94WcNAY3wFQJAXZVIOOJ3ta4Z5/TcSu6wTta2HGVMcfVBvDUYDMhdLcQwhijEawzhzRfAMwynaeIzl+q36kfA==
+
 typescript@^4.9.5:
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"

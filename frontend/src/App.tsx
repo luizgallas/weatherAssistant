@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home } from './screens/Home/Home';
 import styled from 'styled-components';
+import { Colors } from './assets/colors';
 
 function App() {
   return (
@@ -12,9 +13,11 @@ function App() {
 
 const Background = styled.div `
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #232323;
+  background-color: ${Colors.background};
 `
 
 export default App;
