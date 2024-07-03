@@ -19,12 +19,12 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.img`
-    width: 160px;
+    width: 12vw;
 `;
 
 export const Title = styled.h1`
     color: ${Colors.text};
-    font-size: 24px;
+    font-size: 20px;
 `;
 
 export const Body = styled.body``;
@@ -55,3 +55,8 @@ export const RecommendationContainer = styled.div `
     border-radius: 8px;
     background-color: ${Colors.background};
 `;
+
+export const RecommendationText = styled.p`
+    color: ${Colors.text};
+    padding: 0px 24px;
+`
