@@ -13,6 +13,8 @@ export const Container = styled.div`
     background-color: ${Colors.frame};
     border-radius: 8px;
     padding: 24px;
+
+    box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.25);
 `
 
 export const Header = styled.header`
@@ -40,7 +42,7 @@ export const Title = styled.h1`
     font-size: 20px;
 
     @media (max-width: 768px) {
-        font-size: 18px;
+        font-size: 16px;
     }
 `;
 
